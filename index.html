@@ -1,12 +1,87 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Page Title</title>
-</head>
-<body>
+  <head>
+    <title>Page Title</title>
+    <link rel="stylesheet" type"text/css" href="css/main.css"></style>
+    <link rel="stylesheet" type"text/css" href="css/fullpage.css"></style>
+  </head>
+  <body>
+    <div id="fullpage">
+      <div class="section">
+        <div class="slide" data-anchor="intro">
+          <h1>US Obesity Visualization</h1>
+          <h2>Exploring the Magnitude and Prevalence of the Problem in America</h2>
+          <div class="intro">
+            <h3>CS498 Data Visualization<br>By Garrett Chan</h3>
+          </div>
+        </div>
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+        <div class="slide" data-anchor="background">
+          <h2>Background</h2>
+          <p>
+            The US is one of the most obese and overweight countries in the world.
+            This visualization will explore the breakdown of obesity by demographic,
+            in addition to the trends over time.
+            <br>
+            The data can be found at <a href="https://stateofchildhoodobesity.org/monitor/">https://stateofchildhoodobesity.org/monitor/</a>.
+            Data from the CDC can be found at <a href="https://www.cdc.gov/nchs/data-visualization/mortality-leading-causes/index.htm">https://www.cdc.gov/nchs/data-visualization/mortality-leading-causes/index.htm</a>
+          </p>
+        </div>
 
-</body>
+        <div class="slide" id="first-chart" data-anchor="chart1">
+          <h3>Obesity Statistics by Demographic (2018)</h3>
+          <div class="chart chart1">
+            <svg id="svg1"></svg>
+          </div>
+          <input type="radio" id="male" name="gender-c1" value="male" onclick="updateFirstChart()" checked>
+          <label for="male">Male</label>
+          <input type="radio" id="female" name="gender-c1" value="female" onclick="updateFirstChart()">
+          <label for="female">Female</label><br>
+          <p>
+            This first chart shows some shocking overall statistics of obesity within the US. All demographics are affected, some more than others.
+            The next slide will visualize the growth of obesity over time.
+          </p>
+        </div>
+
+        <div class="slide" data-anchor="chart2">
+          <h3>Obesity Trends by Demographic 2000 - 2018</h3>
+          <div class="chart chart2">
+            <svg id="svg2"></svg>
+          </div>
+          <div class="intro">
+            <input type="radio" id="male" name="gender-c2" value="male" onclick="updateSecondChart()" checked>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender-c2" value="female" onclick="updateSecondChart()">
+            <label for="female">Female</label><br>
+            <p>
+              This chart illustrates the growth of obesity in America overtime. The problem has been steadily increasing for every demographic. Hover over the circles to reveal the value. Note that some data may be missing for certain years.
+            </p>
+          </div>
+        </div>
+
+        <div class="slide" data-anchor="chart3">
+          <h3>Top 10 Leading Causes of Deaths (2017)</h3>
+          <div class="chart chart3">
+            <svg id="svg3"></svg>
+          </div>
+          <p>
+            Almost all of the causes of death shown above have obesity as a risk factor.In particular, obesity contributes tremendously to your chances of contracting the two largest causes of death in the US: cancer and heart disease. 
+          <p>
+        </div>
+
+        <div class="slide" data-anchor="chart3">
+          <h1>In conclusion, obesity is a large, and growing problem within America, that can lead to a long list of complications. Public health officials need to enact stronger policy changes to help curb this epidemic. While it is not my intention to scare anybody, I hope these graphs highlight the prevalence of obesity within society. Thank you. </h1>
+        </div>
+
+      </div>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+  <script src="scripts/data.js"></script>
+  <script src="scripts/first.js"></script>
+  <script src="scripts/second.js"></script>
+  <script src="scripts/third.js"></script>
+  <script src="scripts/main.js"></script>
+
+  </body>
 </html>

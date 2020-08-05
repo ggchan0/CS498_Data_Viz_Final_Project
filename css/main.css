@@ -1,0 +1,47 @@
+body {
+  font-family: 'MiloPro', Helvetica, Arial, sans-serif;
+  color: #1a1a1a;
+}
+
+.section {
+  text-align: center;
+}
+
+.bar {
+  fill:
+}
+
+h2 {
+  font-size: 3em;
+  margin: 1em auto;
+}
+
+h1 {
+  width: 75%;
+  margin: 2em auto;
+}
+
+p, .complication-list {
+  font-size: 1.5em;
+  text-align: left;
+  width: 75%;
+  margin: 2em auto;
+}
+
+#x-label {
+  font-size: 15px;
+  text-anchor: middle;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 200px;
+    height: 40px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
