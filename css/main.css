@@ -16,6 +16,12 @@ h2 {
   margin: 1em auto;
 }
 
+.anno {
+  font-size: 12px;
+  text-anchor: middle;
+  text-align: center;
+}
+
 h1 {
   width: 75%;
   margin: 2em auto;

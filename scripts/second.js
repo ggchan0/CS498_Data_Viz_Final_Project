@@ -131,6 +131,29 @@ function chart2() {
 
   svg.append("g")
     .call(d3.axisLeft(y));
+
+  if (gender == "Female") {
+    svg.append("text")
+       .attr("y", 350)
+       .attr("x", 450)
+       .attr('text-anchor', 'middle')
+       .attr("class", "anno")
+       .text("Though low, obesity is rising in Asian populations.");
+   svg.append("text")
+      .attr("y", 0)
+      .attr("x", 450)
+      .attr('text-anchor', 'middle')
+      .attr("class", "anno")
+      .text("More than half of all black women are obese.");
+  } else {
+    var myText =  svg.append("text")
+       .attr("y", 120)
+       .attr("x", 150)
+       .attr('text-anchor', 'middle')
+       .attr("class", "anno")
+       .text("Obesity is constant through more male demographics.");
+  }
+
 }
 
 function updateSecondChart() {

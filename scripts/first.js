@@ -139,6 +139,22 @@ function chart1() {
 
   svg.append("g")
     .call(d3.axisLeft(y));
+
+  if (getRadioVal() == ("Male")) {
+    svg.append("text")
+       .attr("y", 10)
+       .attr("x", 150)
+       .attr('text-anchor', 'middle')
+       .attr("class", "anno")
+       .text("Obesity seems to be much lower for Asian and youth.");
+  } else {
+    svg.append("text")
+       .attr("y", 10)
+       .attr("x", 230)
+       .attr('text-anchor', 'middle')
+       .attr("class", "anno")
+       .text("It greatly affects both genders, with black women being disproportionately affected.");
+  }
 }
 
 function updateFirstChart() {
